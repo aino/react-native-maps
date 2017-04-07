@@ -118,7 +118,9 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
 
     public AirMapView(ThemedReactContext reactContext, AirMapManager manager,
             GoogleMapOptions googleMapOptions) {
-        super(getNonBuggyContext(reactContext), googleMapOptions);
+        //super(getNonBuggyContext(reactContext), googleMapOptions);
+        // hardcode application context
+        super(reactContext.getApplicationContext(), googleMapOptions);
 
         this.manager = manager;
         this.context = reactContext;
